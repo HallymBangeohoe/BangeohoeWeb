@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bangeohoe.hallym.workers.dev/sitemap.xml
