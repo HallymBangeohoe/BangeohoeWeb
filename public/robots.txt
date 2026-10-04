@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bangeohoe.hallym.workers.dev/sitemap.xml
+Sitemap: https://bangeohoe.hallym-ac.workers.dev/sitemap.xml
