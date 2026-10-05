@@ -16,6 +16,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "방어회 | 사이버 위협에 맞서는 사람들",
   description: "공격을 이해하고, 더 나은 방어를 설계하는 정보보안 동아리 방어회입니다.",
+  openGraph: {
+    title: "방어회 | 사이버 위협에 맞서는 사람들",
+    description: "공격을 이해하고, 더 나은 방어를 설계하는 정보보안 동아리 방어회입니다.",
+    url: "https://bangeohoe.hallym-ac.workers.dev",
+    siteName: "방어회",
+    locale: "ko_KR",
+    type: "website",
+  },
   verification:{
     google: "I2YJzL66Tg595IYGpKO3ebiNnH1-bY7oWrVBNeGgVQA",
     other:{
@@ -33,12 +41,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "방어회",
+    alternateName: ["한림대학교 방어회", "Hallym Bangeohoe"],
+    "url": "https://bangeohoe.hallym-ac.workers.dev",
+  }
   return (
     <html lang="ko">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
