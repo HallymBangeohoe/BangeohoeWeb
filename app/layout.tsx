@@ -43,10 +43,16 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "방어회",
-    alternateName: ["한림대학교 방어회", "Hallym Bangeohoe"],
+    "alternateName": ["한림대학교 방어회", "Hallym Bangeohoe"],
     "url": "https://bangeohoe.hallym-ac.workers.dev",
+    "description": "한림대학교 정보보안 및 해킹 분석 학술 동아리",
+    "parentOrganization": {
+      "@type": "CollageOrUniversity",
+      "name": "한림대학교"
+    }
+
   }
   return (
     <html lang="ko">
